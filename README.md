@@ -1,2 +1,2 @@
-* MIKRA
-** open art fund
+# MIKRA
+## open art fund
