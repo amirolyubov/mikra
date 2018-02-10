@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 const ObjectId = mongoose.Schema.Types.ObjectId
 
-
 const initDb = () => {
   mongoose.connect('mongodb://localhost/mikradb')
   .then(() => console.log('MongoDB is started'))

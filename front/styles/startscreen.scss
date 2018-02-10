@@ -1,0 +1,86 @@
+@import "./variables.scss";
+
+@keyframes letterspacing {
+  from {
+    letter-spacing: 3px;
+  }
+  to {
+    letter-spacing: 20px;
+    font-size: 50px;
+  }
+}
+
+.start {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .header_fake {
+    position: absolute;
+    padding: 50px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.3s;
+    background-image: $image_bg;
+    background-size: cover;
+    z-index: 1;
+
+    span {
+      color: rgba(0,0,0,0);
+      &.mikra {
+        font-size: 80px;
+        line-height: 80px;
+        font-family: $font_header;
+        font-weight: bold;
+        font-style: italic;
+        animation-name: letterspacing;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+      &.fund {
+        font-size: 30px;
+        font-family: $font_text;
+      }
+    }
+
+  }
+  .header {
+    padding: 50px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.3s;
+    background-color: $color_black;
+    z-index: 2;
+
+    span {
+      color: $color_white;
+
+      &.mikra {
+        font-size: 80px;
+        line-height: 80px;
+        font-family: $font_header;
+        font-weight: bold;
+        font-style: italic;
+        animation-name: letterspacing;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+      &.fund {
+        font-size: 30px;
+        font-family: $font_text;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      margin-bottom: 100px;
+      transition: 0.8s;
+    }
+  }
+}
