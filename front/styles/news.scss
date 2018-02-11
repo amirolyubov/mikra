@@ -12,7 +12,7 @@
   position: relative;
   user-select: none;
   width: 100%;
-  padding: 100px 0;
+  padding: 70px 0;
   background: $color_black;
   display: flex;
   justify-content: center;
@@ -42,6 +42,7 @@
   }
 
   .loader {
+    transition: 0.4s;
     position: absolute;
     bottom: 0;
     left: 0;

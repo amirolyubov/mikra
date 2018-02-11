@@ -6,7 +6,7 @@ export default class StartScreen extends Component {
   render() {
     return (
       <div className={'start'}>
-        <div className={'header'}>
+        <div className={'header'} onClick={this.handleHeaderClick}>
           <span className={'mikra'}>MIKRA</span> <br />
           <span className={'fund'}>фонд поддержки арт-проектов</span>
         </div>

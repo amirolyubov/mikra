@@ -32,7 +32,7 @@ export default class StartScreen extends Component {
     const { news } = this.props
     const { currentNews } = this.state
     return (
-      <div className={'loader'} style={{width: '100px'}}></div>
+      <div className={'loader'} style={{width: ((100 * (currentNews + 1)) / news.length) + '%'}}></div>
     )
   }
   render() {
