@@ -33,6 +33,7 @@ const usersSchema = mongoose.Schema({
 const grantsSchema = mongoose.Schema({
   name: String,
   description: String,
+  image: String,
   status: { type: String, default: grantStatuses.NEW },
   created: { type: Date, default: Date.now},
   bidsStart: Date,

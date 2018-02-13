@@ -1,0 +1,25 @@
+@import "./variables.scss";
+
+.upcoming {
+  width: 100%;
+  padding-top: 40px;
+  min-height: 20vh;
+
+  span {
+    font-size: 40px;
+    font-family: $font_text;
+    font-weight: 700;
+  }
+  .grants {
+    padding: 20px 0px;
+    display: flex;
+
+    .grant {
+      width: 15vw;
+      height: 15vw;
+      margin-right: 20px;
+      background-color: $color_gray;
+      cursor: pointer;
+    }
+  }
+}
