@@ -27,13 +27,13 @@ const initialState = {
   ],
   grants: [
     {
-      title: 'Dear mom',
+      title: 'Mirror',
       description: 'Yay',
       status: 'NEW',
       image: 'https://uploads.guim.co.uk/2017/10/06/Gaby-Hinsliff,-L.png'
     },
     {
-      title: 'Fired',
+      title: 'Helled',
       description: 'Some one',
       status: 'NEW',
       image: 'https://bloximages.chicago2.vip.townnews.com/billingsgazette.com/content/tncms/assets/v3/editorial/e/9f/e9f555b2-fd83-5f8e-aa88-a9739bbc5129/595ee11f782f0.image.jpg'

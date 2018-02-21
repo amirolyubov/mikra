@@ -9,9 +9,9 @@ export default class GrantsUpcoming extends Component {
   }
   renderGrant(grant, key) {
     return (
-      <div className={'grant'} key={key}>
-        <div>{grant.title}</div>
-        <div>{grant.description}</div>
+      <div className={'grant'} key={key} style={{backgroundImage: 'url(' + grant.image + ')'}}>
+        <div className={'header'}>{grant.title}</div>
+        <div className={'text'}>{grant.description}</div>
       </div>
     )
   }
@@ -19,7 +19,6 @@ export default class GrantsUpcoming extends Component {
     const { grants } = this.props
     return (
       <div className={'upcoming'}>
-        <span>Гранты</span>
         <div className={'grants'}>
           { grants.map((grant, key) => this.renderGrant(grant, key)) }
         </div>

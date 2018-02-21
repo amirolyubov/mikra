@@ -13,75 +13,29 @@
 .start {
   width: 100%;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: $color_gray;
+  background-image: $image_bg;
+  background-size: cover;
 
-  .header_fake {
-    position: absolute;
-    padding: 50px 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    transition: 0.3s;
-    background-image: $image_bg;
-    background-size: cover;
-    z-index: 1;
-
-    span {
-      color: rgba(0,0,0,0);
-      &.mikra {
-        font-size: 80px;
-        line-height: 80px;
-        font-family: $font_header;
-        font-weight: bold;
-        font-style: italic;
-        animation-name: letterspacing;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-      }
-      &.fund {
-        font-size: 30px;
-        font-family: $font_text;
-      }
-    }
-
+  &.__top {
+    height: 10vh;
+    position: fixed;
+    top: 0;
   }
-  .header {
-    padding: 50px 80px;
+
+  .text {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    transition: 0.3s;
-    background-color: $color_black;
-    z-index: 2;
+    justify-content: center;
+    font-size: 900px;
+    font-family: $font_header;
+    color: $color_white;
+    position: absolute;
+    bottom: 0;
 
-    span {
-      color: $color_white;
-
-      &.mikra {
-        font-size: 80px;
-        line-height: 80px;
-        font-family: $font_header;
-        font-weight: bold;
-        font-style: italic;
-        animation-name: letterspacing;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-      }
-      &.fund {
-        font-size: 30px;
-        font-family: $font_text;
-      }
+    div {
+      z-index: 2;
     }
-    &:hover {
-      cursor: pointer;
-      margin-bottom: 100px;
-      transition: 0.8s;
+    span {
+      font-weight: bold;
     }
   }
 }

@@ -25,7 +25,6 @@ const store = createStore(combineReducers({
   router: routerReducer
 }), applyMiddleware(thunk, routerMW))
 
-
 ReactDOM.render(
 <Provider store={store}>
   <ConnectedRouter history={history}>
