@@ -5,15 +5,81 @@ import { withRouter } from 'react-router'
 import { StartScreen, News, GrantsUpcoming, Archive } from '../components'
 
 class App extends Component {
+  renderGrant(grant, key) {
+    return (
+      <div className='block grant' key={key}>
+        <h3>{grant.title || 'Title'}</h3>
+        <div className='text'>{grant.description || 'Body'}</div>
+      </div>
+    )
+  }
   render() {
-    const { main } = this.props
+    const { main: {grants} } = this.props
     return (
       <div className={'main_container'}>
-        <StartScreen />
-        <div className={'app_grants_grid'}>
-          <GrantsUpcoming grants={main.grants.filter(grant => grant.status == 'NEW' || grant.status == 'BIDS_START')}/>
-          <Archive archive={[1, 2, 3, 4, 5, 6, 7, 8, 9]}/>
-          <Archive archive={[1, 2, 3, 4, 5, 6, 7, 8, 9]}/>
+        <h1>fund</h1>
+        <div className='content'>
+          <div className='col_2'></div>
+          <div className='col_4 fix_width'>
+            <h2>Grants</h2>
+            {
+              grants.map((grant, key) => this.renderGrant(grant, key))
+            }
+          </div>
+          <div className='col_1'></div>
+          <div className='col_4'>
+            <div>
+              <h2>Archive</h2>
+              <div className='block'>
+                bdgbdbsrbrsgsrgsrbsr <br />
+                bsrbrsb <br />
+                sebse <br />
+                bes <br />
+                bseb <br />
+                seb <br />
+                sebseb <br />
+                es <br />
+                bdgbdbsrbrsgsrgsrbsr <br />
+                bsrbrsb <br />
+                sebse <br />
+                bes <br />
+                bseb <br />
+                seb <br />
+                sebseb <br />
+                es <br />
+                bdgbdbsrbrsgsrgsrbsr <br />
+                bsrbrsb <br />
+                sebse <br />
+                bes <br />
+                bseb <br />
+                seb <br />
+                sebseb <br />
+                es <br />
+              </div>
+            </div>
+            <div>
+              <h2>Contacts</h2>
+              <div className='block'>
+                bdgbdbsrbrsgsrgsrbsr <br />
+                bsrbrsb <br />
+                sebse <br />
+                bes <br />
+                bseb <br />
+                seb <br />
+                sebseb <br />
+                es <br />
+                bdgbdbsrbrsgsrgsrbsr <br />
+                bsrbrsb <br />
+                sebse <br />
+                bes <br />
+                bseb <br />
+                seb <br />
+                sebseb <br />
+                es <br />
+              </div>
+            </div>
+          </div>
+          <div className='col_2'></div>
         </div>
       </div>
     )
